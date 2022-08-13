@@ -12,6 +12,13 @@ function createCounter() {
         });
       return state;
     },
+    change_index(new_index: number) {
+      update((n) => {
+        n = new_index;
+        state = n;
+        return state;
+      })
+    },
     get_index: () => state,
   };
 }

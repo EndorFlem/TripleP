@@ -5,10 +5,11 @@
 	let current_theme_index = theme_counter.get_index();
 	$: current_theme = themes[current_theme_index];
 	if (browser) {
-		console.log(window.localStorage.getItem('user-theme'));
-		current_theme_index = window.localStorage.getItem('user-theme') == 'light' ? 0 : 1;
-		console.log(window.localStorage.getItem('user-theme'), current_theme_index);
-		current_theme = window.localStorage.getItem('user-theme')!;
+		// console.log(window.localStorage.getItem('user-theme'));
+		// theme_counter.change_index(window.localStorage.getItem('user-theme') == 'light' ? 0 : 1);
+		// current_theme_index = window.localStorage.getItem('user-theme') == 'light' ? 0 : 1;
+		// console.log(window.localStorage.getItem('user-theme'), current_theme_index);
+		// current_theme = window.localStorage.getItem('user-theme')!;
 	}
 	let isLight = current_theme_index == 0;
 	console.log(current_theme);
