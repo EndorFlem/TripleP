@@ -12,8 +12,7 @@
 	<ThemeSwitcher />
 	<div class="label">
 		<img src="images/Icon.svg" class="logo" alt="" />
-		<!-- <h1 class="title">Purple Prints</h1> -->
-		<h1>hello</h1>
+		<h1 class="title">Purple Prints</h1>
 	</div>
 	<NavMenu />
 </header>

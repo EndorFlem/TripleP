@@ -1,10 +1,21 @@
 <script lang="ts">
 	import { theme_counter } from '../store';
+	import { browser } from '$app/env';
 	let themes = ['light', 'dark'];
 	let current_theme_index = theme_counter.get_index();
 	$: current_theme = themes[current_theme_index];
+	if (browser) {
+		console.log(window.localStorage.getItem('user-theme'));
+		current_theme_index = window.localStorage.getItem('user-theme') == 'light' ? 0 : 1;
+		console.log(window.localStorage.getItem('user-theme'), current_theme_index);
+		current_theme = window.localStorage.getItem('user-theme')!;
+	}
+	let isLight = current_theme_index == 0;
+	console.log(current_theme);
 	function changeTheme() {
 		current_theme_index = theme_counter.next(themes.length);
+		window.localStorage.setItem('user-theme', current_theme);
+		console.log(window.localStorage.getItem('user-theme') == current_theme);
 	}
 </script>
 
@@ -13,7 +24,7 @@
 </svelte:head>
 
 <theme-switcher>
-	<input type="checkbox" checked={theme_counter.get_index() == 0} id="switcher" />
+	<input type="checkbox" checked={isLight} id="switcher" />
 	<label for="switcher" on:click={changeTheme}>
 		<div class="ball" />
 		<span class="material-symbols-outlined dark">dark_mode</span>
@@ -39,6 +50,8 @@
 		left: 35px;
 	}
 	input[type='checkbox'] {
+		/* margin-top: 100px;
+		position: absolute; */
 		display: none;
 	}
 	.ball {

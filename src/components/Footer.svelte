@@ -1,6 +1,5 @@
 <footer>
 	<h3>Contributed by open-source team DevBassement</h3>
-
 	<div class="info">
 		<a href="https://github.com/EndorFlem/PurplePrints" id="icon">
 			<img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" id="icon" class="cat" />
@@ -10,9 +9,6 @@
 </footer>
 
 <style>
-	footer {
-		margin-top: auto;
-	}
 	.cat {
 		filter: invert(54%) sepia(13%) saturate(6635%) hue-rotate(228deg) brightness(97%) contrast(77%);
 		transition: 0.2s;
