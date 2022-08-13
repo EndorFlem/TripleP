@@ -7,10 +7,10 @@
 	$: current_theme = themes[current_theme_index];
 
 	if (browser) {
-		theme_counter.change_index(window.matchMedia('(prefers-color-scheme: light)').matches ? 0 : 1);
+		theme_counter.change_index(window.localStorage.getItem('user-theme') == 'light' ? 0 : 1);
 		current_theme_index = theme_counter.get_index();
+
 		current_theme = themes[current_theme_index];
-		console.log(theme_counter.get_index());
 	}
 	function changeTheme() {
 		current_theme_index = theme_counter.next(themes.length);
