@@ -1,0 +1,53 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+* {
+	margin: 0;
+	padding: 0;
+	transition: all 0.5s ease-out;
+	/* transition-property: transform, background-color, color; */
+}
+
+.section {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	padding: 1%;
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+.section-title {
+	text-align: center;
+	color: lightgray;
+}
+.text {
+	text-align: center;
+	border-radius: 10px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	color: lightgrey;
+	border-radius: 20px;
+}
+.body {
+	display: flex;
+	flex-direction: column;
+}
+a {
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 10px;
+	color: lightgray;
+}
+.inner-element {
+	border-radius: 20px;
+}
+/* 
+#a275dc
+#400599
+#31007a
+#000000
+ */

@@ -1,0 +1,10 @@
+.body {
+  background-color: rgb(20, 20, 20);
+}
+
+header, footer, .header {
+  background-color: rgb(15, 15, 15);
+}
+.theme-icon {
+  color: lightyellow
+}

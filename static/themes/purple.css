@@ -1,0 +1,17 @@
+.section, .panel{
+  background-color: #31007a;
+}
+.text {
+	background-color: #400599;
+}
+.link {
+	background-color: #a275dc;
+
+}
+.link:hover {
+  background-color: #400595;
+
+}
+a, p, h1, h2, h3 {
+  color: lightgrey;
+}

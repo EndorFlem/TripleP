@@ -1,0 +1,14 @@
+header, footer, .header{
+  background-color: rgb(250, 250, 250);
+}
+.body {
+  background-color: rgb(242, 242, 242);
+}
+.theme-icon {
+  color: darkslateblue
+}
+.cat {
+  /* filter:invert(99%) sepia(15%) saturate(1218%) hue-rotate(13deg) brightness(103%) contrast(108%); */
+  /* filter: invert(26%) sepia(25%) saturate(1348%) hue-rotate(208deg) brightness(100%) contrast(101%); */
+  filter: invert(54%) sepia(13%) saturate(6635%) hue-rotate(228deg) brightness(97%) contrast(77%);
+}
