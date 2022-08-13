@@ -1,22 +1,21 @@
 <script lang="ts">
 	import { theme_counter } from '../store';
 	import { browser } from '$app/env';
+
 	let themes = ['light', 'dark'];
 	let current_theme_index = theme_counter.get_index();
 	$: current_theme = themes[current_theme_index];
+
 	if (browser) {
-		// console.log(window.localStorage.getItem('user-theme'));
-		// theme_counter.change_index(window.localStorage.getItem('user-theme') == 'light' ? 0 : 1);
-		// current_theme_index = window.localStorage.getItem('user-theme') == 'light' ? 0 : 1;
-		// console.log(window.localStorage.getItem('user-theme'), current_theme_index);
-		// current_theme = window.localStorage.getItem('user-theme')!;
+		theme_counter.change_index(window.matchMedia('(prefers-color-scheme: light)').matches ? 0 : 1);
+		current_theme_index = theme_counter.get_index();
+		current_theme = themes[current_theme_index];
+		console.log(theme_counter.get_index());
 	}
-	let isLight = current_theme_index == 0;
-	console.log(current_theme);
 	function changeTheme() {
 		current_theme_index = theme_counter.next(themes.length);
+		current_theme = themes[current_theme_index];
 		window.localStorage.setItem('user-theme', current_theme);
-		console.log(window.localStorage.getItem('user-theme') == current_theme);
 	}
 </script>
 
@@ -25,7 +24,7 @@
 </svelte:head>
 
 <theme-switcher>
-	<input type="checkbox" checked={isLight} id="switcher" />
+	<input type="checkbox" checked={theme_counter.get_index() == 0} id="switcher" />
 	<label for="switcher" on:click={changeTheme}>
 		<div class="ball" />
 		<span class="material-symbols-outlined dark">dark_mode</span>
