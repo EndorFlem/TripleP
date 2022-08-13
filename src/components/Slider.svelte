@@ -7,25 +7,32 @@
 	function previous() {
 		imageNummber = (imageNummber - 1 + paths.length) % paths.length;
 	}
+
+	import Slider from '../test-slider.svelte';
 </script>
 
 <slider>
-	<button class="left" on:click={previous}>
+	<!-- <button class="left" on:click={previous}>
 		<span class="material-symbols-outlined">keyboard_double_arrow_left</span>
 		<div class="block" />
 	</button>
-	<img src="images/{paths[imageNummber]}" alt="" />
-	<!-- <img src="images/computer work.jpg"> -->
+	<img src="images/UNITYTOP.jpg" id="1" alt="" />
+	<img src="images/SMERT.jpg" id="2" alt="" />
+	<img src="images/SMERTCPP.jpg" id="3" alt="" />
+	<img src="images/CRAZYSHIT.jpg" id="4" alt="" />
 	<button class="right" on:click={next}>
 		<span class="material-symbols-outlined">double_arrow</span>
 		<div class="block" />
-	</button>
+	</button> -->
+	<Slider />
 </slider>
 
 <style>
 	img {
 		width: 80%;
 		border-radius: 20px;
+		transition: 1s;
+		left: 0;
 	}
 	slider {
 		display: inline-flex;
@@ -34,16 +41,13 @@
 		flex: 1 1 0px;
 		margin-right: auto;
 		margin-left: auto;
-		/* width: 80%; */
 	}
 	button {
 		background-color: rgba(0, 0, 0, 0);
 		border: 0px;
-		/* max-width: 3%; */
 		padding: 0;
 		width: 20%;
 		height: 100%;
-		/* width: 10%; */
 	}
 	.left {
 		margin-left: auto;

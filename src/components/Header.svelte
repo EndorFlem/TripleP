@@ -27,6 +27,6 @@
 	}
 	.title {
 		position: absolute;
-		font-size: 5vw;
+		font-size: 60px;
 	}
 </style>
