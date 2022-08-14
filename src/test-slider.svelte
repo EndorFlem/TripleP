@@ -3,7 +3,14 @@
 
 	// DOM Elements
 	let slider, slideImage;
-	const paths = ['UNITYTOP.jpg', 'SMERT.jpg', 'SMERTCPP.jpg', 'CRAZYSHIT.jpg'];
+	const paths = [
+		'UNITYTOP.jpg',
+		'SMERT.jpg',
+		'SMERTCPP.jpg',
+		'CRAZYSHIT.jpg',
+		'CRAZYSHIT.jpg',
+		'CRAZYSHIT.jpg'
+	];
 	// State
 	let isDragging = false,
 		startPos = 0,
@@ -13,7 +20,7 @@
 		currentIndex = 0;
 
 	onMount(() => {
-		const slides = document.querySelectorAll('div');
+		const slides = document.querySelectorAll('.slide');
 		slides.forEach((slide, index) => {
 			// Touch event listeners
 			slide.addEventListener('touchstart', touchStart(index));
@@ -43,6 +50,8 @@
 			const movedBy = currentTranslate - prevTranslate;
 			if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1;
 			if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+			// if (movedBy < -50 && currentIndex < slides.length - 1) currentIndex += 1;
+			// if (movedBy > 50 && currentIndex > 0) currentIndex -= 1;
 			setPositionByIndex();
 			slider.classList.remove('grabbing');
 		}
@@ -80,7 +89,7 @@
 
 <article bind:this={slider}>
 	{#each paths as path}
-		<div on:dragstart|preventDefault>
+		<div on:dragstart|preventDefault class="slide">
 			<img bind:this={slideImage} src="images/{path}" alt="" on:dragstart|preventDefault />
 		</div>
 	{/each}
