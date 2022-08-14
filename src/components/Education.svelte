@@ -1,9 +1,7 @@
 <script>
 	import Slider from './Slider.svelte';
-	// import Slider from '../test-slider.svelte';
 </script>
 
-<!-- <div class="education"> -->
 <div class="main-slide section">
 	<h1>Программирование в каждый класс информатики !</h1>
 	<Slider />
@@ -27,7 +25,6 @@
 	</div>
 </div>
 
-<!-- </div> -->
 <style>
 	h1 {
 		text-align: center;
