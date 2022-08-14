@@ -109,13 +109,17 @@
 		<span class="material-symbols-outlined">double_arrow</span>
 		<div class="ri invisnible body" />
 	</button>
+	<p class="text">
+		Серёжа , блять ! Если ты ещё раз скажешь , что у тебя картинка выходит на 1 пиксель , то готовь
+		жопу , пидор !
+	</p>
 </slider>
 
 <style>
 	.invisnible {
 		width: 4.7vw;
-		height: 40.5vw;
-		margin-top: -21vw;
+		height: 41vw;
+		margin-top: -21.5vw;
 		position: absolute;
 		z-index: 0;
 	}
