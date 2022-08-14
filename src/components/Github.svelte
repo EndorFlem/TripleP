@@ -43,20 +43,20 @@
 	.top > p {
 		background-color: #400599;
 		text-align: left;
-		padding: 5px;
+		padding: 10px;
 		margin-left: 1%;
 		border-radius: 10px;
 	}
 	.link {
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: auto;
-		margin-bottom: 1%;
+		margin-top: 2%;
 		padding: 5px 5px;
+		display: block;
+		width: fit-content;
 	}
 	.text {
-		margin-left: 1%;
-		min-height: 20vh;
+		margin-left: auto;
 		margin-right: auto;
 		display: flex;
 		flex-direction: column;
@@ -73,7 +73,7 @@
 		}
 		.top > p {
 			margin-left: 0;
-			display: block;
+			font-size: small;
 		}
 		img {
 			width: 55vw;
