@@ -3,7 +3,7 @@
 
 	// DOM Elements
 	let slider, slideImage;
-	const paths = [
+	const imagePaths = [
 		'UNITYTOP.jpg',
 		'SMERT.jpg',
 		'SMERTCPP.jpg',
@@ -16,8 +16,23 @@
 		startPos = 0,
 		currentTranslate = 0,
 		prevTranslate = 0,
-		animationID = 0,
-		currentIndex = 0;
+		animationID = 0;
+
+	export var currentIndex = 0;
+
+	export function changed() {
+		setPositionByIndex();
+	}
+
+	// Helpers
+	function setPositionByIndex() {
+		currentTranslate = currentIndex * -window.innerWidth;
+		prevTranslate = currentTranslate;
+		setSliderPosition();
+	}
+	function setSliderPosition() {
+		slider.style.transform = `translateX(${currentTranslate}px)`;
+	}
 
 	onMount(() => {
 		const slides = document.querySelectorAll('.slide');
@@ -48,10 +63,8 @@
 			isDragging = false;
 			cancelAnimationFrame(animationID);
 			const movedBy = currentTranslate - prevTranslate;
-			if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1;
-			if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
-			// if (movedBy < -50 && currentIndex < slides.length - 1) currentIndex += 1;
-			// if (movedBy > 50 && currentIndex > 0) currentIndex -= 1;
+			if (movedBy < -100) currentIndex = (currentIndex + 1) % imagePaths.length;
+			if (movedBy > 100) currentIndex = (currentIndex - 1 + imagePaths.length) % imagePaths.length;
 			setPositionByIndex();
 			slider.classList.remove('grabbing');
 		}
@@ -72,32 +85,22 @@
 			setSliderPosition();
 			isDragging && requestAnimationFrame(animation);
 		}
-
-		function setSliderPosition() {
-			slider.style.transform = `translateX(${currentTranslate}px)`;
-		}
-
-		function setPositionByIndex() {
-			currentTranslate = currentIndex * -window.innerWidth;
-			// currentTranslate = currentIndex * -(window.innerWidth - window.innerWidth / 10);
-			prevTranslate = currentTranslate;
-			setSliderPosition();
-		}
 	});
 </script>
 
 <svelte:window on:contextmenu|preventDefault|stopPropagation />
-
-<article bind:this={slider}>
-	{#each paths as path}
-		<div on:dragstart|preventDefault class="slide">
-			<img bind:this={slideImage} src="images/{path}" alt="" on:dragstart|preventDefault />
-		</div>
-	{/each}
-</article>
+<div class="wraper">
+	<list bind:this={slider}>
+		{#each imagePaths as path}
+			<div on:dragstart|preventDefault class="slide">
+				<img bind:this={slideImage} src="images/{path}" alt="" on:dragstart|preventDefault />
+			</div>
+		{/each}
+	</list>
+</div>
 
 <style>
-	article {
+	list {
 		width: max-content;
 		height: 25vw;
 		display: flex;
@@ -107,11 +110,12 @@
 		cursor: grab;
 	}
 
-	article > :not(:first-child) {
-		margin-left: 5vw;
+	list > :not(:first-child) {
+		margin-left: 10vw;
 	}
 	.slide {
-		width: 90vw;
+		width: 85vw;
+		margin-left: 2.5vw;
 		/* height: 20vw; */
 		user-select: none;
 		display: flex;

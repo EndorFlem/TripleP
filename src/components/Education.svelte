@@ -1,6 +1,6 @@
 <script>
-	// import Slider from './Slider.svelte';
-	import Slider from '../test-slider.svelte';
+	import Slider from './Slider.svelte';
+	// import Slider from '../test-slider.svelte';
 </script>
 
 <!-- <div class="education"> -->
