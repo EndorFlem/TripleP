@@ -114,8 +114,8 @@
 <style>
 	.invisnible {
 		width: 4.7vw;
-		height: 50vh;
-		margin-top: -26.5vh;
+		height: 40.5vw;
+		margin-top: -21vw;
 		position: absolute;
 		z-index: 0;
 	}
@@ -135,7 +135,7 @@
 		background-color: rgba(0, 0, 0, 0);
 		border: 0px;
 		width: 5%;
-		height: 25vw;
+		height: 40vw;
 		padding-top: auto;
 		padding-bottom: auto;
 		position: absolute;
@@ -147,11 +147,11 @@
 	}
 	.right {
 		margin-left: 85%;
-		margin-top: -25%;
+		margin-top: -40%;
 	}
 	list {
 		width: max-content;
-		height: 25vw;
+		height: 40vw;
 		display: flex;
 		overflow: hidden;
 		transform: translateX(0);
@@ -164,8 +164,8 @@
 	}
 	.slide {
 		width: 85vw;
+		height: 100%;
 		margin-left: 2.5vw;
-		/* height: 20vw; */
 		user-select: none;
 		display: flex;
 		align-items: center;
