@@ -79,6 +79,7 @@
 
 		function setPositionByIndex() {
 			currentTranslate = currentIndex * -window.innerWidth;
+			// currentTranslate = currentIndex * -(window.innerWidth - window.innerWidth / 10);
 			prevTranslate = currentTranslate;
 			setSliderPosition();
 		}
@@ -98,6 +99,7 @@
 <style>
 	article {
 		width: max-content;
+		height: 25vw;
 		display: flex;
 		overflow: hidden;
 		transform: translateX(0);
@@ -105,19 +107,24 @@
 		cursor: grab;
 	}
 
-	div {
-		width: 100vw;
-		padding: 1rem;
+	article > :not(:first-child) {
+		margin-left: 5vw;
+	}
+	.slide {
+		width: 90vw;
+		/* height: 20vw; */
 		user-select: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: 5vw;
 	}
 
 	img {
-		max-width: 100%;
-		max-height: 50%;
-		width: 80%;
-		margin-left: 10%;
-		margin-right: 5%;
+		width: 90%;
+		height: 100%;
 		transition: transform 0.3s ease-in-out;
+		border-radius: 20px;
 	}
 
 	:global(.grabbing img) {
