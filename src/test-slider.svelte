@@ -98,7 +98,6 @@
 <style>
 	article {
 		width: max-content;
-		/* height: 70vh; */
 		display: flex;
 		overflow: hidden;
 		transform: translateX(0);
@@ -107,7 +106,7 @@
 	}
 
 	div {
-		width: 90vw;
+		width: 100vw;
 		padding: 1rem;
 		user-select: none;
 	}
