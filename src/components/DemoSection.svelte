@@ -12,7 +12,7 @@
 			cupiditate aliquam maiores placeat sunt iste distinctio consequatur doloremque consequuntur,
 			at omnis id. Tempora laboriosam, amet magnam dolor ipsum corrupti ab.
 			<a href="DemoPage ">
-				<div class="try link">
+				<div class="try link super-link">
 					<h3>Попробуйте сами</h3>
 					<span class="material-symbols-outlined"> code </span>
 				</div>
@@ -48,8 +48,6 @@
 		margin-right: auto;
 		width: 40%;
 		border-radius: 20px;
-		padding: 1px 1px;
-		box-shadow: 1px 5px 5px #31007a;
 	}
 	.text {
 		width: 80%;

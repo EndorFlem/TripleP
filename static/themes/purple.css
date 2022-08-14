@@ -1,7 +1,7 @@
 .section, .panel{
   background-color: #31007a;
 }
-.text {
+.text{
 	background-color: #400599;
 }
 .link {
@@ -10,7 +10,10 @@
 }
 .link:hover {
   background-color: #400595;
-
+}
+.super-link {
+  padding: 1px 1px;
+  box-shadow: 1px 5px 5px #31007a;
 }
 a, p, h1, h2, h3 {
   color: lightgrey;
