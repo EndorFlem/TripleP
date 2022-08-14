@@ -1,41 +1,55 @@
 <script>
-	let imageNummber = 0;
+	let imageNumber = 0;
 	let paths = ['UNITYTOP.jpg', 'SMERT.jpg', 'SMERTCPP.jpg', 'CRAZYSHIT.jpg'];
-	function next() {
-		imageNummber = (imageNummber + 1) % paths.length;
+	function next(imageNummber) {
+		return (imageNummber + 1) % paths.length;
 	}
-	function previous() {
-		imageNummber = (imageNummber - 1 + paths.length) % paths.length;
+	function previous(imageNummber) {
+		return (imageNummber - 1 + paths.length) % paths.length;
 	}
-
-	import Slider from '../test-slider.svelte';
 </script>
 
 <slider>
-	<!-- <button class="left" on:click={previous}>
+	<button
+		class="left"
+		on:click={() => {
+			imageNumber = previous(imageNumber);
+			console.log(imageNumber);
+		}}
+	>
 		<span class="material-symbols-outlined">keyboard_double_arrow_left</span>
-		<div class="block" />
 	</button>
-	<img src="images/UNITYTOP.jpg" id="1" alt="" />
-	<img src="images/SMERT.jpg" id="2" alt="" />
-	<img src="images/SMERTCPP.jpg" id="3" alt="" />
-	<img src="images/CRAZYSHIT.jpg" id="4" alt="" />
-	<button class="right" on:click={next}>
+
+	<img src="images/{paths[imageNumber]}" alt="" />
+
+	<button
+		class="right"
+		on:click={() => {
+			imageNumber = next(imageNumber);
+		}}
+	>
 		<span class="material-symbols-outlined">double_arrow</span>
-		<div class="block" />
-	</button> -->
-	<Slider />
+	</button>
 </slider>
 
 <style>
+	.wrapper {
+		display: inline;
+		overflow: hidden;
+	}
 	img {
-		width: 80%;
+		width: 100%;
 		border-radius: 20px;
-		transition: 1s;
-		left: 0;
+		padding-left: auto;
+		transition: transform 0.3s ease-out;
+		overflow: hidden;
+		display: flex;
 	}
 	slider {
 		display: inline-flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
 		justify-content: center;
 		align-items: center;
 		flex: 1 1 0px;
@@ -56,9 +70,5 @@
 	.right {
 		margin-left: auto;
 		/* margin-right: 10%; */
-	}
-	.block {
-		background-color: red;
-		width: auto;
 	}
 </style>

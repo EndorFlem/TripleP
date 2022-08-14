@@ -4,7 +4,6 @@
 	// DOM Elements
 	let slider, slideImage;
 	const paths = ['UNITYTOP.jpg', 'SMERT.jpg', 'SMERTCPP.jpg', 'CRAZYSHIT.jpg'];
-
 	// State
 	let isDragging = false,
 		startPos = 0,
@@ -82,15 +81,16 @@
 <article bind:this={slider}>
 	{#each paths as path}
 		<div on:dragstart|preventDefault>
-			<img src="images/{path}" alt="" />
+			<img bind:this={slideImage} src="images/{path}" alt="" on:dragstart|preventDefault />
 		</div>
 	{/each}
 </article>
 
 <style>
 	article {
-		height: 90vh;
-		display: inline-flex;
+		width: max-content;
+		/* height: 70vh; */
+		display: flex;
 		overflow: hidden;
 		transform: translateX(0);
 		transition: transform 0.3s ease-out;
@@ -98,12 +98,7 @@
 	}
 
 	div {
-		max-height: 100vh;
-		width: 100vw;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		width: 90vw;
 		padding: 1rem;
 		user-select: none;
 	}
@@ -111,23 +106,10 @@
 	img {
 		max-width: 100%;
 		max-height: 50%;
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 5%;
 		transition: transform 0.3s ease-in-out;
-	}
-
-	h2 {
-		font-size: 2.5rem;
-		margin-bottom: 0rem;
-	}
-
-	h4 {
-		font-size: 1.3rem;
-	}
-
-	button {
-		background-color: #444;
-		color: #fff;
-		text-decoration: none;
-		padding: 1rem 1.5rem;
 	}
 
 	:global(.grabbing img) {

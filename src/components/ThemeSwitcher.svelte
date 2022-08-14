@@ -9,8 +9,6 @@
 	if (browser) {
 		theme_counter.change_index(window.localStorage.getItem('user-theme') == 'light' ? 0 : 1);
 		current_theme_index = theme_counter.get_index();
-
-		current_theme = themes[current_theme_index];
 	}
 	function changeTheme() {
 		current_theme_index = theme_counter.next(themes.length);
@@ -70,22 +68,6 @@
 		height: 25px;
 		align-items: center;
 		box-shadow: inset 1px 1px 5px -3px;
-	}
-	@keyframes theme-switch {
-		from {
-			background-color: beige;
-		}
-		to {
-			background-color: darkslateblue;
-		}
-	}
-	@keyframes switcher {
-		from {
-			left: 0;
-		}
-		to {
-			left: 35px;
-		}
 	}
 	span::selection {
 		background: transparent;
