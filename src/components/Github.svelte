@@ -1,21 +1,18 @@
 <div class="section">
 	<h1 class="section-title">Свобода проекта - свобода творчества</h1>
-	<div class="card">
+	<div class="top card">
 		<img src="images/NotOpenSource.webp" alt="" />
-		<div class="right">
-			<div class="text">
-				<p>
-					МЫ ЗА ОПЕНСОУРС ! - типичный лозунг душевнобольных людей , состоящий в сектах и просящих
-					не денег , звёздочек на GitHub'е , что переводится , как логово мерзавцев , что уже о
-					многом говорит . "Лучше покакать , но опоздать , чем прийти и обосраться" - цитата нашего
-					разработчика . "Лучше вызвать дурку сейчас , чем попасть в неё позже" - уже моя цитата и
-					реакция на неадекватное поведение вышеописанного гаржданина . Мы отдали душу дьяволу и
-					используем тёмную тему , потому что "если закрыть галаза , то становится темно" - опять же
-					цитата нашего пациента
-				</p>
-				<a class="link super-link" href="https://github.com/EndorFlem/PurplePrints">Our Github</a>
-			</div>
-		</div>
+		<div class="substrate" />
+		<p>
+			МЫ ЗА ОПЕНСОУРС ! - типичный лозунг душевнобольных людей , состоящий в сектах и просящих не
+			денег , звёздочек на GitHub'е , что переводится , как логово мерзавцев , что уже о многом
+			говорит . "Лучше покакать , но опоздать , чем прийти и обосраться" - цитата нашего
+			разработчика . "Лучше вызвать дурку сейчас , чем попасть в неё позже" - уже моя цитата и
+			реакция на неадекватное поведение вышеописанного гаржданина . Мы отдали душу дьяволу и
+			используем тёмную тему , потому что "если закрыть галаза , то становится темно" - опять же
+			цитата нашего пациента
+			<a class="link super-link" href="https://github.com/EndorFlem/PurplePrints">Our Github</a>
+		</p>
 	</div>
 </div>
 <div class="section">
@@ -37,24 +34,61 @@
 		border-radius: 20px;
 		margin-left: auto;
 		margin-right: auto;
+		width: 80%;
 	}
 	.card {
 		display: inline-flex;
 		margin-top: 1%;
 	}
-	.right {
-		/* display: flex; */
-		/* flex-direction: column; */
-		border-radius: 10px;
+	.top > p {
+		background-color: #400599;
+		text-align: left;
+		padding: 5px;
 		margin-left: 1%;
-		margin-right: auto;
+		border-radius: 10px;
 	}
 	.link {
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: 1%;
 		padding: 5px 5px;
 	}
 	.text {
-		height: 55%;
+		margin-left: 1%;
+		min-height: 20vh;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media screen and (max-width: 800px) {
+		.substrate {
+			background-color: #31007a;
+			width: 58vw;
+			height: 35vw;
+			position: absolute;
+			z-index: 1;
+			border-radius: 10px 10px 10px 10px;
+		}
+		.top > p {
+			margin-left: 0;
+			display: block;
+		}
+		img {
+			width: 55vw;
+			margin-top: 1%;
+			float: right;
+			position: relative;
+			z-index: 2;
+			padding: 5px;
+		}
+		.link {
+			margin-top: 1%;
+		}
+		.card {
+			display: block;
+			direction: rtl;
+		}
 	}
 </style>

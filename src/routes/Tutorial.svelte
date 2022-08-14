@@ -1,14 +1,12 @@
 <script>
-  import Footer from "../components/Footer.svelte";
-  import Header from "../components/Header.svelte";
+	import Footer from '../components/Footer.svelte';
+	import Header from '../components/Header.svelte';
 </script>
 
 <svelte:head>
-  <title>Purple Prints</title>
+	<title>Purple Prints</title>
 </svelte:head>
 
-<div class="body">
-  <Header />
-
-  <Footer />
-</div>
+<Header />
+<div class="body" />
+<Footer />

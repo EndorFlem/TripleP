@@ -15,7 +15,7 @@ html, body {
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 10px;
-	padding: 1%;
+	padding: 1% 1% 1%  1%;
 	margin-bottom: 1%;
 	margin-top: 1%;
 }
@@ -25,7 +25,6 @@ html, body {
 }
 .text {
 	text-align: center;
-	border-radius: 10px;
 	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
@@ -36,6 +35,7 @@ html, body {
 .body {
 	display: flex;
 	flex-direction: column;
+	min-height: 80vh;
 }
 a {
 	text-decoration: none;
@@ -45,8 +45,29 @@ a {
 .inner-element {
 	border-radius: 20px;
 }
-img {
-	max-width: 50%;
+
+@media screen and (max-width:800px) {
+	h1 {
+		font-size: 1.4rem;
+	}
+	h2 {
+		padding-top: 1%;
+		text-align: center;
+		align-self: center;
+		height: 10%;
+		padding-left: 3px;
+		padding-bottom: 10px;
+	}
+	.section {
+		width: 93%;
+	}
+	.text {
+		width: 90%;
+		margin-bottom: 1%;
+	}
+	.section {
+		margin-top: 2%;
+	}
 }
 /* 
 #a275dc

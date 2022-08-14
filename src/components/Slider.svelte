@@ -117,17 +117,19 @@
 
 <style>
 	.invisnible {
-		width: 4.7vw;
-		height: 100vw;
+		width: 3.99vw;
+		height: 90vw;
 		margin-top: -50vw;
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
+		/* background-color: aqua; */
+		overflow: hidden;
 	}
 	.ri {
 		margin-left: 6vw;
 	}
 	.li {
-		margin-left: -5.7vw;
+		margin-left: -5vw;
 	}
 
 	slider {
@@ -186,5 +188,12 @@
 
 	:global(.grabbing img) {
 		transform: scale(0.9);
+	}
+
+	@media screen and (max-width: 800px) {
+		.ri {
+			width: 2.5vw;
+			margin-left: 9vw;
+		}
 	}
 </style>

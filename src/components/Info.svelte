@@ -30,7 +30,6 @@
 		margin-top: 1%;
 	}
 	img {
-		/* width: 1000px; */
 		width: 50%;
 		border-radius: 20px;
 		margin-left: auto;
@@ -47,5 +46,33 @@
 		width: 50%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	@media screen and (max-width: 800px) {
+		h1 {
+			font-size: larger;
+		}
+		.table {
+			display: flex;
+			flex-direction: column;
+			width: 97%;
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		img {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.important {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+			width: 97%;
+			margin-bottom: 5px;
+		}
+		p {
+			width: 100%;
+		}
 	}
 </style>

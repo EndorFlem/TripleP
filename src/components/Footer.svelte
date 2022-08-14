@@ -18,6 +18,11 @@
 			contrast(114%);
 		transition: 0.2s;
 	}
+	footer {
+		position: absolute;
+		margin-top: auto;
+		width: 100%;
+	}
 	.info {
 		display: flex;
 		align-items: center;
@@ -42,5 +47,14 @@
 		/* margin-left: -10%; */
 		padding: 5px;
 		border-radius: 10px;
+	}
+
+	@media screen and (max-width: 800px) {
+		footer {
+			/* bottom: 0; */
+		}
+		h3 {
+			text-align: center;
+		}
 	}
 </style>

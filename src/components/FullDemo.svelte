@@ -8,7 +8,7 @@
 
 <div class="full-demo section">
 	{#if innerWidth > 800}
-		<iframe src="PurplePrints/index.html" />
+		<iframe src="https://repti-loid.github.io/PurplePrintsWebGL/" />
 	{:else}
 		<div class="warning">
 			<h1 class="section-title">Your device's screen is too narrow</h1>
@@ -27,6 +27,7 @@
 
 		justify-content: center;
 		width: 95%;
+		padding-bottom: 1%;
 	}
 	.full-demo {
 		display: flex;

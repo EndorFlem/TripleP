@@ -9,12 +9,12 @@
 	<title>Purple Prints</title>
 </svelte:head>
 
-<div class="demo body">
-	<Header />
+<Header />
+<div class="page body">
 	<DemoInfo />
 	<FullDemo />
-	<Footer />
 </div>
+<Footer />
 
 <style>
 </style>

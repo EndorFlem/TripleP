@@ -16,11 +16,10 @@
 		</p>
 	</div>
 	<div class="right panel">
-		<h2>ФИгня</h2>
+		<h2>Фигня</h2>
 		<p class="text">
 			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente aliquid fugiat ut nostrum,
-			recusandae facilis praesentium modi sequi, veniam maxime voluptate itaque optio. Eum molestiae
-			similique provident ea illo officiis.
+			recusandae facilis praesentium modi sequi,
 		</p>
 	</div>
 </div>
@@ -31,25 +30,61 @@
 		margin-bottom: 1%;
 	}
 	.panel {
+		/* width: 40.5%; */
 		border-radius: 10px;
-		flex: auto;
 		padding-bottom: 1%;
+		/* background-color: aqua; */
 	}
 	.bottom-panels {
-		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 92%;
 	}
 	h2 {
 		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 5px;
 	}
 	.right {
 		margin-left: 1%;
 	}
-	.bottom-panels {
-		display: flex;
-		flex-direction: row;
-		padding-bottom: 1%;
-		width: 92%;
+
+	@media screen and (max-width: 800px) {
+		h2 {
+			margin-bottom: 1%;
+			padding: 10px;
+		}
+		.bottom-panels {
+			width: 95%;
+			margin-top: 5px;
+			padding-bottom: 5px;
+		}
+		.right {
+			margin-left: 2%;
+			padding-left: 0.5px;
+			width: 39%;
+		}
+		.right > .text {
+			width: 85%;
+		}
+		.left {
+			width: 61%;
+			/* margin-left: 1px; */
+		}
+		.left > .text {
+			height: 78.5%;
+		}
+		.panel {
+			/* width: 49%; */
+			height: 35vh;
+		}
+		.left > h2 {
+			font-size: large;
+		}
 	}
 </style>

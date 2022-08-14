@@ -29,4 +29,11 @@
 		position: absolute;
 		font-size: 60px;
 	}
+
+	@media screen and (max-width: 800px) {
+		.title {
+			font-size: 55px;
+			padding-top: 5px;
+		}
+	}
 </style>
