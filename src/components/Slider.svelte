@@ -118,8 +118,8 @@
 <style>
 	.invisnible {
 		width: 4.7vw;
-		height: 41vw;
-		margin-top: -21.5vw;
+		height: 100vw;
+		margin-top: -50vw;
 		position: absolute;
 		z-index: 0;
 	}
