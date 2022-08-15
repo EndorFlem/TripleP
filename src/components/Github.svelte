@@ -58,8 +58,6 @@
 	.text {
 		margin-left: auto;
 		margin-right: auto;
-		display: flex;
-		flex-direction: column;
 	}
 
 	@media screen and (max-width: 800px) {

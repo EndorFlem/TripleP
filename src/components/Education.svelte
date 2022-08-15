@@ -74,17 +74,21 @@
 		}
 		.left {
 			width: 61%;
-			/* margin-left: 1px; */
 		}
 		.left > .text {
 			height: 78.5%;
 		}
 		.panel {
-			/* width: 49%; */
 			height: 35vh;
 		}
 		.left > h2 {
 			font-size: large;
+		}
+		p {
+			font-size: 0.85rem;
+		}
+		.text {
+			height: 78.8%;
 		}
 	}
 </style>

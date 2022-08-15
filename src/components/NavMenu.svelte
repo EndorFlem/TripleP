@@ -8,7 +8,6 @@
 </nav>
 
 <style>
-	/* @media screen and (max-width: 1920) { */
 	nav {
 		width: fit-content;
 		margin-left: auto;
@@ -27,7 +26,7 @@
 	/* } */
 	@media screen and (max-width: 800px) {
 		a {
-			font-size: 14px;
+			font-size: 0.8rem;
 		}
 		nav {
 			width: 100%;

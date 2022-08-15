@@ -62,7 +62,7 @@
 			position: absolute;
 			margin-top: -64%;
 			width: fit-content;
-			/* margin-left: 1%; */
+			font-size: 1.33rem;
 		}
 		.text {
 			width: 95%;
