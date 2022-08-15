@@ -32,11 +32,6 @@ html, body {
 	color: lightgrey;
 	border-radius: 20px;
 }
-.body {
-	display: flex;
-	flex-direction: column;
-	min-height: 80vh;
-}
 a {
 	text-decoration: none;
 	padding: 5px;

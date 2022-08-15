@@ -5,5 +5,9 @@ html, body {
   height: 720px; */
   /* width: 1920px;
   height: 1080px; */
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+#unity-footer {
+  display: none;
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { theme_counter } from '../store';
+	import { theme_counter } from '../../store';
 	import { browser } from '$app/env';
 
 	let themes = ['light', 'dark'];

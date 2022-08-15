@@ -4,6 +4,7 @@
 		<li><a href="/DemoPage" class="link">Demo</a></li>
 		<li><a href="/MoreInfo" class="link">Sources and more info</a></li>
 		<li><a href="/Tutorial" class="link">Tutorial</a></li>
+		<li><a href="/F&Q" class="link">F&Q</a></li>
 	</ul>
 </nav>
 

@@ -1,15 +1,8 @@
 <script>
-	import Footer from '../components/Footer.svelte';
-	import Header from '../components/Header.svelte';
-	import Github from '../components/Github.svelte';
+	import PageTemplate from '../components/PageTemplate.svelte';
+	import Github from '../components/Sources&Info/Github.svelte';
 </script>
 
-<svelte:head>
-	<title>Purple Prints</title>
-</svelte:head>
-
-<Header />
-<div class="body">
+<PageTemplate>
 	<Github />
-</div>
-<Footer />
+</PageTemplate>

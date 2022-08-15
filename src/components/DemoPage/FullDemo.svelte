@@ -1,14 +1,13 @@
 <script>
 	let innerHeight = 0;
 	let innerWidth = 0;
-	// $: console.log(innerHeight, innerWidth);
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <div class="full-demo section">
 	{#if innerWidth > 900}
-		<iframe src="https://repti-loid.github.io/PurplePrintsWebGL/" />
+		<iframe src="https://repti-loid.github.io/PurplePrintsWebGL/" title="" />
 	{:else}
 		<div class="warning">
 			<h1 class="section-title">Your device's screen is too narrow</h1>
@@ -34,13 +33,15 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		overflow: hidden;
 	}
 	iframe {
 		border: 0;
-		width: 90%;
+		width: 90vw;
 		height: 80vh;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 1%;
+		overflow: hidden;
 	}
 </style>
