@@ -12,11 +12,6 @@
 				libero neque nostrum veritatis sed nam repudiandae dolore magnam quam. Fugit laborum nostrum
 				culpa in mollitia!
 			</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum saepe aperiam magnam tempora
-				incidunt, ex ducimus et repellat quos dignissimos eos aliquid, ad beatae maiores eligendi ab
-				corrupti dolorem molestias.
-			</p>
 		</div>
 	</div>
 </div>
@@ -37,15 +32,28 @@
 	}
 	.important {
 		width: 45%;
-		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 20px;
 	}
 	p {
-		width: 50%;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	@media screen and (max-width: 1000px) {
+		img {
+			width: 60%;
+		}
+		.important {
+			margin-left: 1%;
+		}
+		p {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100%;
+		}
 	}
 
 	@media screen and (max-width: 800px) {
@@ -70,6 +78,7 @@
 			margin-top: 10px;
 			width: 97%;
 			margin-bottom: 5px;
+			height: 10vh;
 		}
 		p {
 			width: 100%;

@@ -7,7 +7,7 @@
 <svelte:window bind:innerWidth bind:innerHeight />
 
 <div class="full-demo section">
-	{#if innerWidth > 800}
+	{#if innerWidth > 900}
 		<iframe src="https://repti-loid.github.io/PurplePrintsWebGL/" />
 	{:else}
 		<div class="warning">
@@ -27,7 +27,7 @@
 
 		justify-content: center;
 		width: 95%;
-		padding-bottom: 1%;
+		margin-top: 1%;
 	}
 	.full-demo {
 		display: flex;

@@ -46,6 +46,8 @@ a {
 	border-radius: 20px;
 }
 
+
+
 @media screen and (max-width:800px) {
 	h1 {
 		font-size: 1.4rem;
@@ -60,13 +62,11 @@ a {
 	}
 	.section {
 		width: 93%;
+		margin-top: 2%;
 	}
 	.text {
 		width: 90%;
 		margin-bottom: 1%;
-	}
-	.section {
-		margin-top: 2%;
 	}
 }
 /* 
