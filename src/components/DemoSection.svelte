@@ -52,30 +52,6 @@
 		width: 80%;
 	}
 
-	@media screen and (max-width: 1000px) {
-		.demo {
-			display: flex;
-		}
-		.try {
-			position: absolute;
-			left: 5%;
-			bottom: -63%;
-			width: 58.7vw;
-			height: 4%;
-			margin-bottom: 1%;
-		}
-		video {
-			height: 20%;
-			margin-bottom: calc(5vh + 1%);
-		}
-		.text {
-			height: 79%;
-		}
-		.description {
-			height: 30vh;
-			display: block;
-		}
-	}
 	@media screen and (max-width: 800px) {
 		.demo {
 			flex-direction: column;
