@@ -7,7 +7,7 @@
 	<div class="cards">
 		<CardTemplate
 			ava="images/Soler.jpg"
-			name="EndorFlem"
+			name="Durka agent"
 			description="FrontEnd and design develoment. Author of idea"
 		/>
 		<CardTemplate ava="images/SirGay.png" name="Sir Gay" description="Core developer" />
