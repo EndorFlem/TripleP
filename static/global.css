@@ -10,6 +10,10 @@ html, body {
 	/* transition-property: transform, background-color, color; */
 }
 
+.section-title {
+	text-align: center;
+}
+
 .section {
 	width: 90%;
 	margin-left: auto;
@@ -18,9 +22,6 @@ html, body {
 	padding: 1% 1% 1%  1%;
 	margin-bottom: 1%;
 	margin-top: 1%;
-}
-.section-title {
-	text-align: center;
 	color: lightgray;
 }
 .text {
