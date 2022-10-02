@@ -1,33 +1,34 @@
 <script lang="ts">
-	import { theme_counter } from '../../store';
-	import { browser } from '$app/env';
+	import { theme } from '../../store';
+	// import { browser } from '$app/env';
 
-	let themes = ['light', 'dark'];
-	let current_theme_index = theme_counter.get_index();
-	$: current_theme = themes[current_theme_index];
+	// let themes = ['light', 'dark'];
+	// let current_theme_index = theme_counter.get_index();
+	// $: current_theme = themes[current_theme_index];
 
-	if (browser) {
-		theme_counter.change_index(window.localStorage.getItem('user-theme') == 'light' ? 0 : 1);
-		current_theme_index = theme_counter.get_index();
-	}
-	function changeTheme() {
-		current_theme_index = theme_counter.next(themes.length);
-		current_theme = themes[current_theme_index];
-		window.localStorage.setItem('user-theme', current_theme);
-	}
+	// if (browser) {
+	// 	theme_counter.change_index(window.localStorage.getItem('user-theme') == 'light' ? 0 : 1);
+	// 	current_theme_index = theme_counter.get_index();
+	// }
+	// function changeTheme() {
+	// 	current_theme_index = theme_counter.next(themes.length);
+	// 	current_theme = themes[current_theme_index];
+	// 	window.localStorage.setItem('user-theme', current_theme);
+	// }
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="themes/{current_theme}.css" />
+	<!-- <link rel="stylesheet" href="themes/{current_theme}.css" /> -->
+	<link rel="stylesheet" href="themes/{theme.get_theme()}.css" />
 </svelte:head>
 
 <theme-switcher>
-	<input type="checkbox" checked={theme_counter.get_index() == 0} id="switcher" />
-	<label for="switcher" on:click={changeTheme}>
+	<!-- <input type="checkbox" checked={theme_counter.get_index() == 0} id="switcher" /> -->
+	<!-- <label for="switcher" on:click={changeTheme}>
 		<div class="ball" />
 		<span class="material-symbols-outlined dark">dark_mode</span>
 		<span class="material-symbols-outlined light">light_mode</span>
-	</label>
+	</label> -->
 </theme-switcher>
 
 <style>

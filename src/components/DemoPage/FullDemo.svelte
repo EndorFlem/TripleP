@@ -37,8 +37,8 @@
 	}
 	iframe {
 		border: 0;
-		width: 90vw;
-		height: 80vh;
+		width: 100%;
+		height: 965px;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 1%;

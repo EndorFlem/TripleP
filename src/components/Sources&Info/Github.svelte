@@ -34,7 +34,7 @@
 		border-radius: 20px;
 		margin-left: auto;
 		margin-right: auto;
-		width: 80%;
+		width: 40vw;
 	}
 	.card {
 		display: inline-flex;
@@ -54,6 +54,9 @@
 		padding: 5px 5px;
 		display: block;
 		width: fit-content;
+		/* position: absolute;
+		bottom: 25%;
+		right: 30%; */
 	}
 	.text {
 		margin-left: auto;
